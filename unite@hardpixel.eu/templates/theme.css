@@ -1,0 +1,40 @@
+.window-button .icon {
+  width: [width]px;
+  height: [height]px;
+}
+
+.close .icon {
+  background-image: url("[close]");
+}
+
+.close:hover .icon {
+  background-image: url("[closeHover]");
+}
+
+.close:active .icon {
+  background-image: url("[closeActive]");
+}
+
+.minimize .icon {
+  background-image: url("[min]");
+}
+
+.minimize:hover .icon {
+  background-image: url("[minHover]");
+}
+
+.minimize:active .icon {
+  background-image: url("[minActive]");
+}
+
+.maximize .icon {
+  background-image: url("[max]");
+}
+
+.maximize:hover .icon {
+  background-image: url("[maxHover]");
+}
+
+.maximize:active .icon {
+  background-image: url("[maxActive]");
+}
