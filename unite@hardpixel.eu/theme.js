@@ -4,7 +4,7 @@ const Unite = imports.misc.extensionUtils.getCurrentExtension()
 
 const THEME_DIRS = [
   GLib.build_filenamev([Unite.path, 'themes']),
-  GLib.build_filenamev([GLib.get_home_dir(), '.local/share/unite-shell/themes'])
+  GLib.build_filenamev([GLib.get_user_data_dir(), 'unite-shell/themes'])
 ]
 
 function loadTemplate() {
