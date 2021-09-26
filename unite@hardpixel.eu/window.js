@@ -23,6 +23,9 @@ const MOTIF_HINTS = '_MOTIF_WM_HINTS'
 const _SHOW_FLAGS = ['0x2', '0x0', '0x1', '0x0', '0x0']
 const _HIDE_FLAGS = ['0x2', '0x0', '0x2', '0x0', '0x0']
 
+// List of applications for which to ignore the client-decorated setting
+const IGNORE_APPS = ['Google Chrome', 'Google Chrome (unstable)']
+
 function safeSpawn(command) {
   try {
     return GLib.spawn_command_line_sync(command)
@@ -195,7 +198,7 @@ var MetaWindow = GObject.registerClass(
     }
 
     get clientDecorated() {
-      return this.win.is_client_decorated()
+      return this.win.is_client_decorated() && !IGNORE_APPS.includes( this.app.get_name() )
     }
 
     get primaryScreen() {
